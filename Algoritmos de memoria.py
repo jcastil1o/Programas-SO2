@@ -10,7 +10,9 @@ como paginación, segmentación, y otros métodos de administración de memoria.
 """
 
 #librerias de pantallas
-
+import tkinter as tk
+import time
+from time import sleep
 #funciones de memorias
 def primer_ajuste(bloques, procesos):
     asignacion = [-1] * len(procesos)
@@ -85,23 +87,26 @@ def comparar (bloques, procesos):
     bloques_copia = bloques[:]
     a_primer = primer_ajuste(bloques_copia, procesos)
     mostrar_asignacion(a_primer)
-
+    time.sleep(3)
     print("\nMejor ajuste:")
     bloques_copia = bloques[:] 
     a_mejor = mejor_ajuste(bloques_copia, procesos)
     mostrar_asignacion(a_mejor)
-
+    time.sleep(3)
     print("\nPeor ajuste:")
     bloques_copia = bloques[:]
     a_peor = peor_ajuste(bloques_copia, procesos)
     mostrar_asignacion(a_peor)
-
+    time.sleep(3)
     print("\nSiguiente ajuste:")
     bloques_copia = bloques[:]
     a_siguiente = siguiente_ajuste(bloques_copia, procesos)
     mostrar_asignacion(a_siguiente)
 
 bloques = list(map(int, input("Ingrese los tamaños de los bloques de memoria: (separados por espacios) ").split()))
+time.sleep(1)
 procesos = list(map(int, input("Ingrese los tamaños de cada proceso: (separados por espacios) ").split()))
+time.sleep(1)
 
 comparar(bloques, procesos)
+time.sleep(1)
