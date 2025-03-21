@@ -1,0 +1,25 @@
+Resultados de la asignación de memoria
+
+Tamaños de los bloques de memoria ingresados: 78 45 25 36
+Tamaños de los procesos ingresados: 98 56 100
+
+Primer ajuste:
+Proceso 1 no pudo ser asignado
+Proceso 2 asignado al bloque 1
+Proceso 3 no pudo ser asignado
+
+Mejor ajuste:
+Proceso 1 no pudo ser asignado
+Proceso 2 asignado al bloque 1
+Proceso 3 no pudo ser asignado
+
+Peor ajuste:
+  Proceso 1 no asignado
+  Proceso 2 asignado al bloque 1
+  Proceso 3 no asignado
+
+Siguiente ajuste:
+  Proceso 1 no asignado
+  Proceso 2 asignado al bloque 1
+  Proceso 3 no asignado
+

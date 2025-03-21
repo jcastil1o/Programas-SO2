@@ -126,11 +126,15 @@ def realizar_asignacion():
             resultados_text.insert(tk.END, f"  Proceso {i+1} no asignado\n")
 
 def generar_txt():
+    encabezado = "Resultados de la asignación de memoria\n\n"
     contenido = resultados_text.get(1.0, tk.END)
-    archivo = filedialog.asksaveasfilename(defaultextension = ".txt", filetypes = [("*.txt")])
+    archivo = filedialog.asksaveasfilename(defaultextension=".txt", filetypes=[("Archivos de texto", "*.txt")])
 
     if archivo:
         with open(archivo, "w") as f:
+            f.write(encabezado)
+            f.write("Tamaños de los bloques de memoria ingresados: " + bloques_entry.get() + "\n")
+            f.write("Tamaños de los procesos ingresados: " + procesos_entry.get() + "\n\n")
             f.write(contenido)
 
 
